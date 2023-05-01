@@ -295,6 +295,39 @@
 			"response": []
 		},
 		{
+			"name": "Get user details after Deleting",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1595c610-8ead-4feb-be29-b05fe7097e2f",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "e5eef121-d8a6-469e-b835-aac82d87925d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{accessToken}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{baseURL}}/users/{{newUserID}}"
+			},
+			"response": []
+		},
+		{
 			"name": "Update user details",
 			"event": [
 				{
@@ -645,12 +678,12 @@
 	],
 	"variable": [
 		{
-			"id": "856883f7-b766-49f7-80bc-0943a90a8073",
+			"id": "cb448473-cc30-4277-a37c-bfeee835b4bd",
 			"key": "accessToken",
 			"value": "bfed7a50f0c94c7e02fd7b1da4ed9e3bfcb3314bba5ce4d33a03153b773f80b5"
 		},
 		{
-			"id": "5d444897-3e32-4e62-8634-07e99444fb99",
+			"id": "c446a04b-d1dc-4ea2-8568-83d4edf3af8e",
 			"key": "baseURL",
 			"value": "https://gorest.co.in/public/v2"
 		}
