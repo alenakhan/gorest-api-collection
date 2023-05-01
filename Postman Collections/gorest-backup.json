@@ -612,7 +612,10 @@
 						"exec": [
 							"pm.test(\"Status code is 204\", function () {",
 							"    pm.response.to.have.status(204);",
-							"});"
+							"    pm.environment.set(\"newUserID\", null);",
+							"});",
+							"",
+							"postman.setNextRequest(\"Get user details\");"
 						],
 						"type": "text/javascript"
 					}
@@ -671,12 +674,12 @@
 	],
 	"variable": [
 		{
-			"id": "ae96e445-d8bb-4ee4-af2c-217d00f2f5fb",
+			"id": "2b3647d6-00ac-420a-954d-2483807fcf07",
 			"key": "accessToken",
 			"value": "bfed7a50f0c94c7e02fd7b1da4ed9e3bfcb3314bba5ce4d33a03153b773f80b5"
 		},
 		{
-			"id": "981b117b-6277-48cd-baa1-eee99519bc8d",
+			"id": "4fae082c-bf78-4c40-a0c4-9ebe9e665aa6",
 			"key": "baseURL",
 			"value": "https://gorest.co.in/public/v2"
 		}
