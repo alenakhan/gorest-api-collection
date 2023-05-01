@@ -121,7 +121,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n        \"name\": \"{{$randomFullName}}\",\n        \"email\": \"{{$randomEmail}}\",\n        \"gender\": \"male\",\n        \"status\": \"inactive\"\n }",
+					"raw": "{\n        \"name\": \"{{$randomFullName}}\",\n        \"email\": \"{{$randomEmail}}\",\n        \"gender\": \"{{gender}}\",\n        \"status\": \"inactive\"\n }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -643,12 +643,12 @@
 	],
 	"variable": [
 		{
-			"id": "3861b8fa-2fa5-41cd-99fa-c3bd3f2be444",
+			"id": "3520060c-982a-46e5-83b0-d6f0ce6c2ee7",
 			"key": "accessToken",
 			"value": "bfed7a50f0c94c7e02fd7b1da4ed9e3bfcb3314bba5ce4d33a03153b773f80b5"
 		},
 		{
-			"id": "a6052f42-a7c9-4a17-8ef7-6e8ed93f7067",
+			"id": "f9597406-9c86-4d06-8943-ded1d7192bd6",
 			"key": "baseURL",
 			"value": "https://gorest.co.in/public/v2"
 		}
