@@ -21,7 +21,7 @@
 					}
 				}
 			],
-			"_postman_id": "350bbb4e-5df7-47dd-bf5d-6a6b1b227f90",
+			"id": "350bbb4e-5df7-47dd-bf5d-6a6b1b227f90",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -92,9 +92,23 @@
 						],
 						"type": "text/javascript"
 					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "81c5f5a9-a588-425d-a1ba-ba7e1aed59e3",
+						"exec": [
+							"let genders = [\"male\", \"female\"];",
+							"let statuses = [\"active\", \"inactive\"];",
+							"",
+							"pm.variables.set(\"gender\", genders[_.random(genders.length - 1)]);",
+							"pm.variables.set(\"status\", statuses[_.random(statuses.length - 1)]);"
+						],
+						"type": "text/javascript"
+					}
 				}
 			],
-			"_postman_id": "c50a9bbd-bd03-41e0-a06f-e695f27a1757",
+			"id": "c50a9bbd-bd03-41e0-a06f-e695f27a1757",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -109,7 +123,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n        \"name\": \"{{$randomFullName}}\",\n        \"email\": \"{{$randomEmail}}\",\n        \"gender\": \"male\",\n        \"status\": \"inactive\"\n }",
+					"raw": "{\n        \"name\": \"{{$randomFullName}}\",\n        \"email\": \"{{$randomEmail}}\",\n        \"gender\": \"{{gender}}\",\n        \"status\": \"{{status}}\"\n }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -263,7 +277,7 @@
 					}
 				}
 			],
-			"_postman_id": "e828fe36-cc4b-4ec8-a54f-2abe0a4b45ab",
+			"id": "e828fe36-cc4b-4ec8-a54f-2abe0a4b45ab",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -296,7 +310,7 @@
 					}
 				}
 			],
-			"_postman_id": "00b615aa-d971-42d6-89c2-53250dd2228e",
+			"id": "00b615aa-d971-42d6-89c2-53250dd2228e",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -330,14 +344,7 @@
 					"script": {
 						"id": "9f46f52d-033a-492d-9803-dc2e41cddd0a",
 						"exec": [
-							"// let titles = [\"aaa\", \"bbb\", \"ccc\", \"ddd\", \"eee\"];",
-							"// let bodies = [\"abcde\", \"fghij\", \"klmno\", \"pqrst\", \"uvwxyz\"];",
-							"",
-							"",
-							"// pm.variables.set(\"title\", titles[_.random(titles.length -1)]);",
-							"// pm.variables.set(\"body\", bodies[_.random(bodies.length -1)]);",
-							"",
-							"// var title = "
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -361,7 +368,7 @@
 					}
 				}
 			],
-			"_postman_id": "40a8008b-1404-4d09-a2fe-1590685d7e5c",
+			"id": "40a8008b-1404-4d09-a2fe-1590685d7e5c",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -416,7 +423,7 @@
 					}
 				}
 			],
-			"_postman_id": "de3b45b5-ad6a-4ddc-80b9-4da78c0dc90b",
+			"id": "de3b45b5-ad6a-4ddc-80b9-4da78c0dc90b",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -449,7 +456,7 @@
 					}
 				}
 			],
-			"_postman_id": "23df6d2b-ae8a-4a4a-b3be-b5800fc4c10e",
+			"id": "23df6d2b-ae8a-4a4a-b3be-b5800fc4c10e",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -491,7 +498,7 @@
 					}
 				}
 			],
-			"_postman_id": "f0889c21-d879-4866-ab7f-6087434d3dd4",
+			"id": "f0889c21-d879-4866-ab7f-6087434d3dd4",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -536,7 +543,7 @@
 					}
 				}
 			],
-			"_postman_id": "4fe7aebc-9caf-4628-86d5-5d208acb120e",
+			"id": "4fe7aebc-9caf-4628-86d5-5d208acb120e",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -578,7 +585,7 @@
 					}
 				}
 			],
-			"_postman_id": "374173fa-85da-4bc4-aef8-56d67511bca9",
+			"id": "374173fa-85da-4bc4-aef8-56d67511bca9",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -611,7 +618,7 @@
 					}
 				}
 			],
-			"_postman_id": "e101a1bf-319b-4700-8082-a7ec537cffd0",
+			"id": "e101a1bf-319b-4700-8082-a7ec537cffd0",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -627,20 +634,51 @@
 				"url": "{{baseURL}}/users/{{newUserID}}"
 			},
 			"response": []
+		},
+		{
+			"name": "Get user details after Deleting",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1595c610-8ead-4feb-be29-b05fe7097e2f",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "e5eef121-d8a6-469e-b835-aac82d87925d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{accessToken}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{baseURL}}/users/{{newUserID}}"
+			},
+			"response": []
 		}
 	],
 	"variable": [
 		{
-			"id": "43b4844f-05b3-44f0-a6f7-6d40ab0ee2f3",
+			"id": "ae96e445-d8bb-4ee4-af2c-217d00f2f5fb",
 			"key": "accessToken",
-			"value": "bfed7a50f0c94c7e02fd7b1da4ed9e3bfcb3314bba5ce4d33a03153b773f80b5",
-			"type": "string"
+			"value": "bfed7a50f0c94c7e02fd7b1da4ed9e3bfcb3314bba5ce4d33a03153b773f80b5"
 		},
 		{
-			"id": "a40d7dfe-358b-4108-9c9c-8d556d128f01",
+			"id": "981b117b-6277-48cd-baa1-eee99519bc8d",
 			"key": "baseURL",
-			"value": "https://gorest.co.in/public/v2",
-			"type": "string"
+			"value": "https://gorest.co.in/public/v2"
 		}
 	]
 }
