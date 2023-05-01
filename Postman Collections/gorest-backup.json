@@ -267,11 +267,17 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "1595c610-8ead-4feb-be29-b05fe7097e2f",
+						"id": "7fc938a8-a08e-4991-bb98-10e692a6a3f5",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});"
+							"pm.test(\"Status code verification\", function () {",
+							"    if (pm.environment.get(\"newUserID\")) {",
+							"        pm.response.to.have.status(200);",
+							"    } else {",
+							"        pm.response.to.have.status(404);",
+							"        postman.setNextRequest(null);",
+							"    }",
+							"});",
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -674,12 +680,12 @@
 	],
 	"variable": [
 		{
-			"id": "2b3647d6-00ac-420a-954d-2483807fcf07",
+			"id": "4b1b8cbd-8d78-4058-a030-b1887ce5edf6",
 			"key": "accessToken",
 			"value": "bfed7a50f0c94c7e02fd7b1da4ed9e3bfcb3314bba5ce4d33a03153b773f80b5"
 		},
 		{
-			"id": "4fae082c-bf78-4c40-a0c4-9ebe9e665aa6",
+			"id": "e1b53d7f-2d37-414a-bec6-15e597f6dd4d",
 			"key": "baseURL",
 			"value": "https://gorest.co.in/public/v2"
 		}
