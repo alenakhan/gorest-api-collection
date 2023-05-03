@@ -26,12 +26,6 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": {
-						"token": "{{accessToken}}"
-					}
-				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -675,12 +669,12 @@
 	],
 	"variable": [
 		{
-			"id": "909deecd-d5f9-445a-a839-51eec8ef2985",
+			"id": "603f43f8-7ed3-4cb5-b452-ab71dcd05a6b",
 			"key": "accessToken",
 			"value": "bfed7a50f0c94c7e02fd7b1da4ed9e3bfcb3314bba5ce4d33a03153b773f80b5"
 		},
 		{
-			"id": "ec196f88-1900-4ace-81d5-ff9b95698979",
+			"id": "998c1257-df19-4eb7-8800-a5b8cd8b933d",
 			"key": "baseURL",
 			"value": "https://gorest.co.in/public/v2"
 		}
