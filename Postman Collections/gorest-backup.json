@@ -645,14 +645,42 @@
 			"response": []
 		}
 	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "{{accessToken}}"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "7758304e-1c2a-479d-ac8d-8f4386bcf3e2",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "238f56fb-6d4d-488d-88e2-ac38bc0e845e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
 	"variable": [
 		{
-			"id": "61d56db9-3f06-4a67-b825-d1c98c715683",
+			"id": "909deecd-d5f9-445a-a839-51eec8ef2985",
 			"key": "accessToken",
 			"value": "bfed7a50f0c94c7e02fd7b1da4ed9e3bfcb3314bba5ce4d33a03153b773f80b5"
 		},
 		{
-			"id": "a89359ac-137a-4dd7-afe8-4698e46fa569",
+			"id": "ec196f88-1900-4ace-81d5-ff9b95698979",
 			"key": "baseURL",
 			"value": "https://gorest.co.in/public/v2"
 		}
